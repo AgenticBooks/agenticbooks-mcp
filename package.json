@@ -1,0 +1,27 @@
+{
+  "name": "agenticbooks-mcp",
+  "version": "0.1.0",
+  "description": "Hosted MCP server exposing a startup's accounting ledger to AI agents — live P&L and bank balances, transaction review/reclassification, chart-of-accounts and banking-source management. Remote, OAuth-authenticated.",
+  "homepage": "https://agenticbooks.com",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "remote-mcp",
+    "ai-agents",
+    "accounting",
+    "bookkeeping",
+    "finance",
+    "fintech",
+    "quickbooks",
+    "stripe",
+    "mercury"
+  ],
+  "mcp": {
+    "type": "remote",
+    "transport": "http",
+    "url": "https://mcp.agenticbooks.ai/mcp",
+    "auth": ["oauth2", "api-key"]
+  }
+}
