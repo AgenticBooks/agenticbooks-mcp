@@ -10,7 +10,7 @@ you connect your MCP client to the AgenticBooks endpoint and authenticate with
 your AgenticBooks account. This repository is the public listing and connection
 guide; the server itself runs as managed infrastructure.
 
-- **Website:** https://agenticbooks.com
+- **Website:** https://www.agenticbooks.ai
 - **MCP endpoint:** `https://mcp.agenticbooks.ai/mcp`
 - **Transport:** Streamable HTTP
 - **Auth:** OAuth 2.0 (Claude "Custom Connector" flow via Clerk) **or** an
@@ -47,6 +47,13 @@ Typical prompts once connected:
 
 See Anthropic's guide to remote custom connectors:
 https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp
+
+### Cursor — install as a plugin
+
+This repository is an [Agent Plugin](https://agent-plugins.org): `plugin.json`
+carries the identity and `mcp.json` the remote server. Install it from the
+[Cursor Directory](https://cursor.directory/plugins) or point Cursor at this
+repo; Cursor runs the OAuth sign-in on first use.
 
 ### API key (any MCP client over HTTP)
 
@@ -130,8 +137,8 @@ non-destructive; writes are recorded in an append-only audit trail.
 
 ## Links
 
-- Website — https://agenticbooks.com
-- Support — https://agenticbooks.com (contact via dashboard)
+- Website — https://www.agenticbooks.ai
+- Support — https://www.agenticbooks.ai (contact via dashboard)
 
 _AgenticBooks is a hosted service. This repository documents how to connect; it
 is not the server source._

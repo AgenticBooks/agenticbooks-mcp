@@ -1,0 +1,24 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agenticbooks",
+  "version": "0.1.0",
+  "description": "Startup books from live bank and billing feeds: P&L, balances, approvals, period close.",
+  "author": {
+    "name": "AgenticBooks",
+    "url": "https://www.agenticbooks.ai"
+  },
+  "homepage": "https://www.agenticbooks.ai/ai-agents",
+  "repository": "https://github.com/AgenticBooks/agenticbooks-mcp",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "mcp",
+    "accounting",
+    "bookkeeping",
+    "finance",
+    "stripe",
+    "mercury",
+    "revenuecat",
+    "open-banking",
+    "ai-agents"
+  ]
+}
