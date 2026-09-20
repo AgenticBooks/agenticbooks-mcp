@@ -92,6 +92,9 @@ non-destructive; writes are recorded in an append-only audit trail.
 | `get_account_balance` | Current balances across the org's connected money providers. |
 | `get_bank_balances` | Bank holdings, one line per connected bank (Mercury, etc.). |
 | `get_audit_log` | Reads the append-only audit trail, newest first. |
+| `get_books_status` | Everything an agent needs first: what is connected, every open queue, and the ONE next step. |
+| `get_transaction` | Full detail for one transaction: booking, counterparty, attached evidence, audit history. |
+| `get_billing_status` | The org's AgenticBooks subscription state (trial, active, grace, walled). |
 
 ### Review & classification
 | Tool | What it does |
@@ -100,6 +103,9 @@ non-destructive; writes are recorded in an append-only audit trail.
 | `get_pending_by_counterparty` | Summarises the review queue clustered by counterparty and direction. |
 | `approve_classification` | Approves one event from the review queue by assigning its account. |
 | `reclassify_entry` | Changes the account on an already-posted ledger entry (audit-trailed). |
+| `list_suggested_transfers` | Bank-to-bank transfer pairs the matcher proposed but could not book with certainty. |
+| `confirm_transfer` | Books a suggested transfer pair as an internal transfer (no P&L effect). |
+| `reject_transfer` | Rejects a suggested pair so both legs return to ordinary classification. |
 
 ### Counterparty rules (the learned vendor map)
 | Tool | What it does |
@@ -117,6 +123,12 @@ non-destructive; writes are recorded in an append-only audit trail.
 | `rename_chart_account` | Renames an account (the code never changes). |
 | `set_chart_account_active` | Deactivates or reactivates a chart account. |
 
+### Documents (receipts & invoices)
+| Tool | What it does |
+| --- | --- |
+| `list_documents` | Stored receipts and invoices with their pipeline status; surfaces open match proposals. |
+| `attach_document` | Attaches a stored document to a transaction as its evidence (never books anything). |
+
 ### Periods & integrations
 | Tool | What it does |
 | --- | --- |
@@ -124,6 +136,9 @@ non-destructive; writes are recorded in an append-only audit trail.
 | `reimport_historical` | Queues a historical import over a chosen window. |
 | `connect_mercury` | Connects the org to Mercury via a read-only, scoped API token. |
 | `disconnect_mercury` | Disables the org's Mercury integration (audit-trailed). |
+| `connect_meow` | Connects the org to Meow via a read-only API key. |
+| `disconnect_meow` | Disables the org's Meow integration (audit-trailed). |
+| `get_onboarding_status` | Connection-only walk (superseded by get_books_status). |
 
 ---
 
