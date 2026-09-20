@@ -1,9 +1,14 @@
 {
-  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
-  "name": "com.agenticbooks/mcp",
-  "description": "Hosted MCP server exposing a startup's accounting ledger to AI agents: live P&L and bank balances, transaction review and reclassification, chart-of-accounts and banking-source management.",
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.agenticbooks/books",
+  "title": "AgenticBooks",
+  "description": "Startup books from live bank and billing feeds: P&L, balances, approvals, period close.",
+  "websiteUrl": "https://www.agenticbooks.ai",
+  "repository": {
+    "url": "https://github.com/AgenticBooks/agenticbooks-mcp",
+    "source": "github"
+  },
   "version": "0.1.0",
-  "websiteUrl": "https://agenticbooks.com",
   "remotes": [
     {
       "type": "streamable-http",
